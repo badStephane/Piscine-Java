@@ -14,16 +14,15 @@ public class Capitalize {
         ) {
             String line;
             while ((line = br.readLine()) != null) {
-                // Capitalize the first letter of each word
-                String capitalizedLine = capitalizeWords(line);
+                
+                String capitalizedLine = capitalizeLine(line);
                 bw.write(capitalizedLine);
-                bw.newLine(); // Add a new line after writing each line
+                bw.newLine();
             }
         }
     }
 
-    // Helper function to capitalize the first letter of each word in a string
-    private static String capitalizeWords(String input) {
+    private static String capitalizeLine(String input) {
         String[] words = input.split(" ");
         StringBuilder capitalized = new StringBuilder();
 
@@ -35,6 +34,6 @@ public class Capitalize {
             }
         }
 
-        return capitalized.toString().trim(); // Remove the last extra space
+        return capitalized.toString().trim();
     }
 }
