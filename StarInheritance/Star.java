@@ -1,13 +1,22 @@
-package StarInheritance;
-
-public class Star extends CelestialObject{
+public class Star extends CelestialObject {
     private double magnitude;
 
-    public double getMagnitude(){
-        return magnitude;
-    }
-    public void setMagnitude(double newMagnitude){
-        this.magnitude = newMagnitude;
+    public Star() {
+        super(); 
+        this.magnitude = 0.0; 
     }
 
+    public Star(String name, double x, double y, double z, double magnitude) {
+        super(name, x, y, z);
+        this.magnitude = magnitude;
+    }
+
+    public double getMagnitude() {
+        return magnitude;
+    }
+
+    // Settr pour magnitude
+    public void setMagnitude(double magnitude) {
+        this.magnitude = magnitude;
+    }
 }

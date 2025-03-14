@@ -1,6 +1,3 @@
-package StarInheritance;
-
-
 public class CelestialObject{
     public double x;
     public double y;
